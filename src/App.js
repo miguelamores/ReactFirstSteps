@@ -9,12 +9,9 @@ class App extends Component {
     this.state={
       obj1: [],
       obj2: [],
-      isUser: true,
-      user: '',
-      city: ''
+      isUser: true
     }
 
-    this.handleChangeSelect = this.handleChangeSelect.bind(this);
     this.handleSend = this.handleSend.bind(this);
   }
 
@@ -40,11 +37,6 @@ class App extends Component {
     alert("Se enviaron los datos: "+  e.target.value);
   }
 
-  handleChangeSelect(e) {
-    this.setState({user: e.target.value});
-    alert("Se selecciono:"+ e.target.value);
-  }
-
   render() {
     return (
       <div className="App">
@@ -56,7 +48,7 @@ class App extends Component {
 
         </p>
         <Pagina opciones={this.state.obj1} isUser={!this.state.isUser}/>
-        <Pagina opciones={this.state.obj2} isUser={this.state.isUser} onSelectChange={this.handleChangeSelect}/>
+        <Pagina opciones={this.state.obj2} isUser={this.state.isUser} />
         <button onClick={this.handleSend}>Enviar</button>
       </div>
     );

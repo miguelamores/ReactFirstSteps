@@ -5,6 +5,6 @@ import './index.css';
 import Pagina from './Pagina'
 
 ReactDOM.render(
-  <Pagina />,
+  <App />,
   document.getElementById('root')
 );
